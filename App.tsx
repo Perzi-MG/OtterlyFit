@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Hello } from './Components/Hello';
 import { RoundedButton } from './Components/RoundedButton';
+import { OptionsSVG } from './assets/options';
 
 export default function App() {
   return (
@@ -9,7 +10,10 @@ export default function App() {
       <StatusBar style="auto" />
       <Hello/>
       <RoundedButton>
-        <Text>Press Me</Text>
+        <Text style={{ color: "#fff" }}>Hola</Text>
+      </RoundedButton>
+      <RoundedButton>
+        <OptionsSVG width={24} height={24} color={"#fff"}/>
       </RoundedButton>
     </View>
   );
@@ -18,8 +22,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center',
+    gap: 20,
   },
 });
