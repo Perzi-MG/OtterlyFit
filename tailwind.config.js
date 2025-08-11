@@ -9,6 +9,7 @@ module.exports = {
       lightGreen: "#4A9782",
       beige: "#DCD0A8",
       lightBeige: "#FFF9E5",
+      brandBlack: "#2C2C2C",
     },
     extend: {},
   },
