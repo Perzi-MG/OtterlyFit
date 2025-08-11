@@ -1,30 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { Hello } from './Components/Hello';
-import { RoundedButton } from './Components/RoundedButton';
+import { RoundedButton } from './components/RoundedButton';
 import { OptionsSVG } from './assets/options';
+import "./global.css";
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View className='flex-1 items-center justify-center bg-black gap-5'>
       <StatusBar style="auto" />
-      <Hello/>
       <RoundedButton>
-        <Text style={{ color: "#fff" }}>Hola</Text>
+        <Text className="text-white font-semibold">Hola</Text>
       </RoundedButton>
       <RoundedButton>
-        <OptionsSVG width={24} height={24} color={"#fff"}/>
+        <OptionsSVG width={20} height={20} color={"#fff"}/>
       </RoundedButton>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#000',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 20,
-  },
-});
