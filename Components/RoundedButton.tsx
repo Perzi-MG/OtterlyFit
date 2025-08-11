@@ -1,9 +1,9 @@
-import { Pressable } from "react-native";
+import { Pressable, StyleSheet } from "react-native";
 import React from "react";
 
-export function RoundedButton({children}: React.PropsWithChildren<{}>) {
+export function RoundedButton({ children }: React.PropsWithChildren<{}>) {
     return (
-        <Pressable style={{backgroundColor: '#6200ee', padding: 10, borderRadius: 30, borderColor: '#fff'}}>
+        <Pressable className="bg-brandBlack px-4 py-3 rounded-3xl w-20 items-center justify-center">
             {children}
         </Pressable>
     )
