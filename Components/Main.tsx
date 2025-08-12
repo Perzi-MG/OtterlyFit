@@ -9,7 +9,7 @@ export default function Main() {
             <View className='flex-1 flex-col bg-brandGray gap-5'>
                 <View className='flex flex-row justify-between items-center px-6 pt-safe'>
                     <RoundedButton>
-                        <Text className="text-white font-semibold">Hola</Text>
+                        <Text className="text-beige font-semibold">Hola</Text>
                     </RoundedButton>
                     <RoundedButton>
                         <OptionsSVG width={20} height={20}/>
