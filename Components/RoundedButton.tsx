@@ -3,7 +3,7 @@ import React from "react";
 
 export function RoundedButton({ children }: React.PropsWithChildren<{}>) {
     return (
-        <Pressable className="bg-brandBlack px-4 py-3 rounded-3xl w-20 items-center justify-center">
+        <Pressable className="bg-brandBlack px-4 py-3 rounded-3xl max-w-30 items-center justify-center">
             {children}
         </Pressable>
     )
