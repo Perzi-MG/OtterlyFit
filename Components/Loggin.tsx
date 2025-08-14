@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { View, Image } from 'react-native';
 import { TextInput, Button, Text, Card, useTheme, IconButton } from 'react-native-paper';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../Components/firebase'; // Asegúrate de que la ruta sea correcta
+import { auth } from './firebase_conts'; // Asegúrate de que la ruta sea correcta
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { useState } from 'react';
+import { View } from 'react-native';
 
 type RootStackParamList = {
   Main: undefined;

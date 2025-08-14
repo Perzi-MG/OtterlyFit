@@ -1,9 +1,9 @@
 import { Text, View, Alert } from 'react-native';
-import { OptionsSVG } from '.././assets/options';
+import { OptionsSVG } from '../assets/options';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { signOut } from 'firebase/auth';
-import { auth } from '../components/firebase'; // Ajusta la ruta según tu estructura
-import { useAuth } from '../components/AuthContext'; // Ajusta la ruta según tu //  estructura
+import { auth } from './firebase_conts'; // Ajusta la ruta según tu estructura
+import { useAuth } from './AuthContext'; // Ajusta la ruta según tu //  estructura
 // ...other imports
 
 import React from 'react';

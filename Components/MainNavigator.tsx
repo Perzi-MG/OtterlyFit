@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { View, ActivityIndicator } from 'react-native';
-import { onAuthStateChanged, User } from 'firebase/auth';
-import { auth } from './firebase_conts';
-import LoginScreen from './Loggin';
-import Main from './Main';
+import LoginScreen from './Loggin'; // Ajusta la ruta según tu estructura
+import Main from './Main'; // Tu componente Main existente
+import { useAuth } from './AuthContext'; // Ajusta la ruta según tu estructura
 
 type RootStackParamList = {
   Login: undefined;
@@ -14,18 +13,9 @@ type RootStackParamList = {
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function MainNavigator() {
-  const [user, setUser] = useState<User | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const { user, isLoading } = useAuth();
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
-      setIsLoading(false);
-    });
-
-    return unsubscribe;
-  }, []);
-
+  // Mostrar loading mientras se verifica la autenticación
   if (isLoading) {
     return (
       <View style={{
@@ -42,8 +32,10 @@ export default function MainNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       {user ? (
+        // Usuario autenticado - mostrar la app principal
         <Stack.Screen name="Main" component={Main} />
       ) : (
+        // Usuario no autenticado - mostrar login
         <Stack.Screen name="Login" component={LoginScreen} />
       )}
     </Stack.Navigator>
