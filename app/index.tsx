@@ -1,7 +1,10 @@
+import { View } from "react-native";
 import Main from "../components/Main";
 
-export default function Index(){
+export default function Index() {
     return (
-        <Main/>
+        <View className="flex-1 bg-brandGray">
+            <Main />
+        </View>
     )
 }
