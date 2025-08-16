@@ -1,9 +1,5 @@
 import { Text, View, Alert } from 'react-native';
-<<<<<<< HEAD
-import { OptionsSVG } from '../assets/options';
-=======
 import { OptionsSVG } from '../assets/Icons/options';
->>>>>>> origin/main
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { signOut } from 'firebase/auth';
 import { auth } from './firebase_conts'; // Ajusta la ruta según tu estructura
