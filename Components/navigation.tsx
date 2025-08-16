@@ -43,7 +43,7 @@ export default function MainNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       {user ? (
-        <Stack.Screen name="Main" component={Main} />
+        <Stack.Screen name="Main" component={LoginScreen} />
       ) : (
         <Stack.Screen name="Login" component={LoginScreen} />
       )}
