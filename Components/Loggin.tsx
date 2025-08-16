@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { View } from 'react-native';
 import { 
   Button, 
@@ -13,6 +14,12 @@ import {
   createUserWithEmailAndPassword 
 } from 'firebase/auth';
 import { auth } from '../components/firebase_conts';
+=======
+import { View, Image } from 'react-native';
+import { TextInput, Button, Text, Card, useTheme, IconButton } from 'react-native-paper';
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../components/firebase'; // Asegúrate de que la ruta sea correcta
+>>>>>>> origin/main
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useGoogleAuth } from './authService'; // Importa el hook de Google Auth
 

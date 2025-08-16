@@ -3,7 +3,11 @@ import { RoundedButton } from "./RoundedButton";
 import { OptionsSVG } from "../assets/Icons/options";
 import { SearchIcon } from "../assets/Icons/search";
 import { colors } from "../assets/colors";
+<<<<<<< HEAD
 import Card from "../Card";
+=======
+import Card from "./Card";
+>>>>>>> origin/main
 import { LinearGradient } from "expo-linear-gradient";
 
 export default function MainCard() {
