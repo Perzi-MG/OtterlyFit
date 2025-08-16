@@ -1,21 +1,15 @@
-import { Text, View } from 'react-native';
-import { RoundedButton } from './RoundedButton';
-import { OptionsSVG } from '../assets/options';
+import { Image, Text, View } from 'react-native';
+import { RoundedButton } from '.././components/RoundedButton';
+import { OptionsSVG } from '../assets/Icons/options';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { colors } from '../assets/colors';
+import { SearchIcon } from '../assets/Icons/search';
+import MainCard from './MainCard';
 
 export default function Main() {
     return (
-        <SafeAreaProvider>
-            <View className='flex-1 flex-col bg-brandGray gap-5'>
-                <View className='flex flex-row justify-between items-center px-6 pt-safe'>
-                    <RoundedButton>
-                        <Text className="text-beige font-semibold">Mis cojones</Text>
-                    </RoundedButton>
-                    <RoundedButton>
-                        <OptionsSVG width={20} height={20} color={"#fff"}/>
-                    </RoundedButton>
-                </View>
-            </View>
+        <SafeAreaProvider className=''>
+            <MainCard/>
         </SafeAreaProvider>
     );
 }
