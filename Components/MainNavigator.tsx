@@ -1,9 +1,9 @@
- import React from 'react';
+import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { View, ActivityIndicator } from 'react-native';
-import LoginScreen from './Loggin'; // Ajusta la ruta según tu estructura
-import Main from './Main'; // Tu componente Main existente
-import { useAuth } from './AuthContext'; // Ajusta la ruta según tu estructura
+import LoginScreen from './Loggin'; // Tu pantalla de login
+import Main from './Main'; // Tu pantalla principal - CORREGIDO
+import { useAuth } from './AuthContext';
 
 type RootStackParamList = {
   Login: undefined;
@@ -32,7 +32,7 @@ export default function MainNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       {user ? (
-        // Usuario autenticado - mostrar la app principal
+        // CORREGIDO: Usuario autenticado - mostrar Main, NO LoginScreen
         <Stack.Screen name="Main" component={Main} />
       ) : (
         // Usuario no autenticado - mostrar login

@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { View, ActivityIndicator } from 'react-native';
 import { onAuthStateChanged, User } from 'firebase/auth';
-import { auth } from './firebase_conts';
-import LoginScreen from './Loggin';
-import Main from './Main';
+
+import { auth } from '../components/firebase_conts'; // Ajusta la ruta según tu estructura
+import LoginScreen from '../components/Loggin';
+import Main from '../components/Main';
 
 type RootStackParamList = {
   Login: undefined;
@@ -42,7 +43,7 @@ export default function MainNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       {user ? (
-        <Stack.Screen name="Main" component={Main} />
+        <Stack.Screen name="Main" component={LoginScreen} />
       ) : (
         <Stack.Screen name="Login" component={LoginScreen} />
       )}
