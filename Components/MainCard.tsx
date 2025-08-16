@@ -3,17 +3,17 @@ import { RoundedButton } from "./RoundedButton";
 import { OptionsSVG } from "../assets/Icons/options";
 import { SearchIcon } from "../assets/Icons/search";
 import { colors } from "../assets/colors";
-import Card from "../Card";
+import Card from "./Card";
 import { LinearGradient } from "expo-linear-gradient";
 
 export default function MainCard() {
     return (
-        <View className="rounded-[40px] h-[40%] w-full overflow-hidden">
+        <View className="rounded-[40px] h-[40%] w-full">
             <LinearGradient
                 colors={['#E3E2A9', '#BFC8B5', '#C9CBD7']}
                 start={{ x: 0, y: 0 }}
                 end={{ x: 1, y: 0 }}
-                style={{ flex: 1, paddingHorizontal: 20, paddingBottom: 20 }}
+                style={{ flex: 1, paddingHorizontal: 20, paddingBottom: 20, borderRadius: 40 }}
             >
                 <View className='flex-1 flex-col gap-6 z-20'>
                     <View className='flex flex-row justify-between items-center pt-safe'>
